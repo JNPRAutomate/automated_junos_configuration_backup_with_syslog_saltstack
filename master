@@ -1,0 +1,14 @@
+engines:
+    - junos_syslog:
+        port: 516
+pillar_roots:
+    base:
+        - /srv/pillar
+ext_pillar:
+    - git:
+        - master git@100.123.35.1:organization/network_parameters.git
+fileserver_backend:
+    - git
+gitfs_remotes:
+    - ssh://git@100.123.35.1/organization/network_model.git
+loop_interval: 30
